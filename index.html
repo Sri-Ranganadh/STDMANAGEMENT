@@ -1,0 +1,110 @@
+
+<html>
+    <head>
+
+        <title>Portal</title>
+       
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/css.css">
+        <style>
+            .lec{
+                display: none;
+            }
+            .stud{
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="rcorners1" >
+           <center><font style="font-family: sans-serif; color: rgb(247, 243, 243); font-size: larger;"><b><i>SRKR ENGINEERING COLLEGE</i></b></font></center> 
+           <center><font style="font-family: sans-serif; color: rgb(247, 243, 243); font-size: small;"><b><i></i></b></font></center> 
+        </div>
+        <br><br><br>
+        <center>
+            <div id="container" class="choose">
+                <h2>Choose User</h2>
+                <div class="imgcontainer">
+                    <img src="images/image.png" alt="Avatar" class="avatar">
+                  </div>
+                <div>
+                    <!-- <a href="Lecturer_Login.html"><button class="button button1">Faculty</button></a> -->
+                    <button class="button button1" id="faculty" onclick="fact()">Faculty</button>
+                </div>
+                <div>
+                    <!-- <a href="Student_Login.html"><button class="button button1">Student</button></a> -->
+                    <button class="button button1" id="student" onclick="stud()">Student</button>
+                </div>
+            </div>
+            <div id="container" class="lec">
+                <h2>Lecturer Login</h2>
+                <div class="imgcontainer">
+                    <img src="images/image.png" alt="Avatar" class="avatar">
+                  </div>
+                <div>
+                    <form action="/student management-new/Lecturer_Login.php" method="post">
+                        <h3 >ID</h3>
+                        <input type="text" class="id" name="id">
+                        <h3 >Password</h3>
+                        <input type="password" class="password" name="password">
+                      	
+                            	<button class="button button1" type="submit"  >Submit</button>  
+                            	 
+                      </form>
+                </div>
+                <div>
+                    <br><br>
+                    <center><b>Back to <a onclick="lBack()" style="text-decoration: none; color: blue; cursor: pointer;">main page</a></b></center>
+                </div>
+            </div>
+            <div id="container" class="stud">
+                <h2>Student Login</h2>
+                <div class="imgcontainer">
+                    <img src="images/image.png" alt="Avatar" class="avatar">
+                  </div>
+                <div>
+                    <form action="./Student_Login.php" method="post">
+                        <h3 >ID</h3>
+                        <input type="text" class="id" name="id">
+                        <h3 >Password</h3>
+                        <input type="password" class="password" name="password">
+                      	
+                        <button class="button button1" type="submit"  >Submit</button>  
+                              
+                      </form>
+                      <form>
+                      	
+                      </form>
+                </div>
+                <div>
+                    <br><br>
+                    <center><b>Back to <a onclick="sBack()" style="text-decoration: none; color: blue; cursor: pointer;">main page</a></b></center>
+                </div>
+            </div>
+        </center>
+        <script>
+
+            function fact(){
+                document.getElementsByClassName("choose")[0].style.display="none";
+                document.getElementsByClassName("lec")[0].style.display="block";
+            }
+
+            function stud(){
+                document.getElementsByClassName("choose")[0].style.display="none";
+                document.getElementsByClassName("stud")[0].style.display="block";
+            }
+
+            function lBack(){
+                document.getElementsByClassName("lec")[0].style.display="none";
+                document.getElementsByClassName("choose")[0].style.display="block";
+            }
+
+            function sBack(){
+                document.getElementsByClassName("stud")[0].style.display="none";
+                document.getElementsByClassName("choose")[0].style.display="block";
+            }
+            
+        </script>
+    </body>
+</html>
